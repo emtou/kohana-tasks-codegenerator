@@ -236,7 +236,7 @@ abstract class Charougna_Minion_Codegenerator_Task_Generic extends Minion_Task
     if ( ! preg_match('/_/', $this->_get_name()))
       return '';
 
-    $path = strtolower(preg_replace('/_[\w]+$/D', '', $this->_get_name()));
+    $path = strtolower(preg_replace('/_[a-zA-Z]+$/D', '', $this->_get_name()));
 
     return preg_replace('/_/', '/', $path).'/';
   }
